@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L04-message-hierarchy.schema.json",
+  "title": "L4 Message Hierarchy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "brand_voice_ref", "levels"],
+  "properties": {
+    "id": { "type": "string" },
+    "brand_voice_ref": { "type": "string" },
+    "levels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rank", "message", "rationale"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1, "description": "Urutan baca: 1 = dibaca pertama" },
+          "message": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    }
+  }
+}

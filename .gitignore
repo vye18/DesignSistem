@@ -1,0 +1,7 @@
+# Generated Knowledge Graph index (§8.4) — built from nodes/ + edges/ at build time
+knowledge-graph/index/graph.db
+knowledge-graph/index/*.sqlite
+
+# OS/editor noise
+.DS_Store
+*.swp

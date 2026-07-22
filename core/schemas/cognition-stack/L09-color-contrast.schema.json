@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L09-color-contrast.schema.json",
+  "title": "L9 Color & Contrast",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "typography_ref", "palette", "justified_by"],
+  "properties": {
+    "id": { "type": "string" },
+    "typography_ref": { "type": "string" },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "color", "contrast_purpose"],
+        "properties": {
+          "role": { "type": "string" },
+          "color": { "type": "string", "description": "hex/token" },
+          "contrast_purpose": { "type": "string", "description": "apa yang dibawa mata vs apa yang diam" }
+        }
+      }
+    },
+    "focal_points": { "type": "array", "items": { "type": "string" } },
+    "justified_by": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" }
+    }
+  }
+}

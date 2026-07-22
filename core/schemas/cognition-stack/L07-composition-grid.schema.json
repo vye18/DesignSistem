@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L07-composition-grid.schema.json",
+  "title": "L7 Composition & Grid",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "visual_strategy_ref", "grid_system", "spatial_zones", "rationale"],
+  "properties": {
+    "id": { "type": "string" },
+    "visual_strategy_ref": { "type": "string" },
+    "grid_system": { "type": "string", "description": "mis. '12-column modular grid', 'asymmetric 3-zone'" },
+    "spatial_zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["zone", "purpose", "maps_to_message_rank"],
+        "properties": {
+          "zone": { "type": "string" },
+          "purpose": { "type": "string" },
+          "maps_to_message_rank": { "type": "integer", "description": "Ref ke rank di L4 yang dilayani zona ini" }
+        }
+      }
+    },
+    "rationale": { "type": "string" }
+  }
+}

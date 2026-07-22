@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/case-study.schema.json",
+  "title": "CaseStudy Node",
+  "description": "Studi kasus konkret yang menunjukkan satu atau lebih Pattern diterapkan.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "summary", "pattern_ids", "system_id"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^case-study:[a-z0-9-]+$" },
+    "summary": { "type": "string" },
+    "pattern_ids": { "type": "array", "items": { "type": "string" } },
+    "system_id": { "type": "string" },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "attribution"],
+        "properties": {
+          "path": { "type": "string" },
+          "attribution": { "type": "string" },
+          "usage_note": { "type": "string", "description": "Wajib: gambar untuk analisis pola, bukan reproduksi utuh berlisensi (§12.1)" }
+        }
+      }
+    },
+    "contradicts": { "type": "array", "items": { "type": "string" }, "description": "IDs CaseStudy lain yang berelasi contradicts" }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L00-brief-intake.schema.json",
+  "title": "L0 Brief Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "raw_brief", "stated_request", "inferred_intent", "ambiguities"],
+  "properties": {
+    "id": { "type": "string" },
+    "raw_brief": { "type": "string", "description": "Brief mentah dari user, verbatim" },
+    "stated_request": { "type": "string", "description": "Apa yang secara literal diminta" },
+    "inferred_intent": { "type": "string", "description": "Apa yang tersirat di balik permintaan literal" },
+    "ambiguities": { "type": "array", "items": { "type": "string" } },
+    "clarifications_needed": { "type": "array", "items": { "type": "string" } },
+    "clarifications_resolved": { "type": "boolean", "default": false }
+  }
+}

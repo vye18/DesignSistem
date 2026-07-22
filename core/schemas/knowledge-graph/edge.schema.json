@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/edge.schema.json",
+  "title": "Edge (satu baris di edges.jsonl)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["from", "to", "relation"],
+  "properties": {
+    "from": { "type": "string", "description": "ID node sumber" },
+    "to": { "type": "string", "description": "ID node tujuan" },
+    "relation": {
+      "type": "string",
+      "enum": [
+        "justifies",
+        "observed_in",
+        "belongs_to",
+        "applies_to",
+        "tests",
+        "implements",
+        "contradicts",
+        "supersedes"
+      ]
+    },
+    "weight": { "type": "number", "minimum": 0, "maximum": 1, "default": 1 },
+    "note": { "type": "string" }
+  }
+}

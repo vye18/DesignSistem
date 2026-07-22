@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/system.schema.json",
+  "title": "System Node",
+  "description": "Kumpulan pola dari satu tradisi/sistem desain, mis. Swiss Design, IBM Carbon.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "description"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^system:[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "origin": { "type": "string" }
+  }
+}

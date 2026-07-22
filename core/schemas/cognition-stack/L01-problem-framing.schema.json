@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L01-problem-framing.schema.json",
+  "title": "L1 Problem Framing",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "brief_intake_ref", "communication_problem", "success_criteria"],
+  "properties": {
+    "id": { "type": "string" },
+    "brief_intake_ref": { "type": "string", "description": "Ref ke artefak L0" },
+    "communication_problem": { "type": "string", "description": "Masalah komunikasi sesungguhnya, bukan restatement brief (mis. bukan 'buat poster')" },
+    "rejected_framings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["framing", "why_rejected"],
+        "properties": {
+          "framing": { "type": "string" },
+          "why_rejected": { "type": "string" }
+        }
+      }
+    },
+    "success_criteria": { "type": "array", "items": { "type": "string" } }
+  }
+}

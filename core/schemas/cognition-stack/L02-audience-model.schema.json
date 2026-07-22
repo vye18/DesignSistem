@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L02-audience-model.schema.json",
+  "title": "L2 Audience Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "problem_framing_ref", "primary_audience", "context_of_viewing", "mental_state"],
+  "properties": {
+    "id": { "type": "string" },
+    "problem_framing_ref": { "type": "string" },
+    "primary_audience": { "type": "string" },
+    "secondary_audiences": { "type": "array", "items": { "type": "string" } },
+    "context_of_viewing": { "type": "string", "description": "Konteks fisik/situasional saat dilihat (mis. billboard jalan raya, layar HP saat scrolling)" },
+    "mental_state": { "type": "string", "description": "Kondisi mental audiens saat kontak (mis. terburu-buru, santai, mencari informasi spesifik)" },
+    "physical_constraints": { "type": "array", "items": { "type": "string" }, "description": "mis. jarak baca, ukuran layar, pencahayaan" },
+    "literacy_assumptions": { "type": "string" },
+    "prior_knowledge": { "type": "string" }
+  }
+}

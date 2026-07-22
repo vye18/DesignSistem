@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L13-revision-loop.schema.json",
+  "title": "L13 Revision Loop",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "self_critique_ref", "target_layer", "reason", "iteration_count"],
+  "properties": {
+    "id": { "type": "string" },
+    "self_critique_ref": { "type": "string" },
+    "target_layer": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$", "description": "Lapis yang gagal dan harus diulang — bukan selalu L11" },
+    "reason": { "type": "string" },
+    "previous_attempt_ref": { "type": "string" },
+    "iteration_count": { "type": "integer", "minimum": 1 }
+  }
+}

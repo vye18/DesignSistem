@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/benchmark.schema.json",
+  "title": "Benchmark Node",
+  "description": "Kasus uji terukur untuk QA (§12.2).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "category_layer", "domain", "type", "tests"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^benchmark:[a-z0-9-]+$" },
+    "category_layer": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$", "description": "Lapis kognisi yang diuji" },
+    "domain": { "type": "string", "description": "ID Domain node" },
+    "type": { "type": "string", "enum": ["regression", "adversarial", "cross-model"] },
+    "tests": { "type": "array", "items": { "type": "string" }, "description": "IDs Principle dan/atau Pattern yang diuji" },
+    "input_brief": { "type": "string" },
+    "expected_outcome": { "type": "string" }
+  }
+}

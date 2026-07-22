@@ -1,0 +1,4 @@
+{"from": "principle:example-contrast-creates-hierarchy", "to": "pattern:example-modular-grid-for-density", "relation": "justifies", "weight": 1, "note": "example seed — lihat knowledge-graph/README.md"}
+{"from": "pattern:example-modular-grid-for-density", "to": "case-study:example-company-profile-x", "relation": "observed_in", "weight": 1, "note": "example seed"}
+{"from": "case-study:example-company-profile-x", "to": "system:example-swiss-design", "relation": "belongs_to", "weight": 1, "note": "example seed"}
+{"from": "pattern:example-modular-grid-for-density", "to": "domain:example-poster", "relation": "applies_to", "weight": 1, "note": "example seed"}

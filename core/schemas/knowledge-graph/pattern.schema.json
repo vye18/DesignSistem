@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/pattern.schema.json",
+  "title": "Pattern Node",
+  "description": "Pola berpikir hasil reverse-engineering dari suatu sistem desain (bukan aset visualnya).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "description", "source_systems", "domains", "justified_by"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^pattern:[a-z0-9-]+$" },
+    "description": { "type": "string" },
+    "source_systems": { "type": "array", "items": { "type": "string" }, "description": "IDs node System" },
+    "domains": { "type": "array", "items": { "type": "string" }, "description": "IDs node Domain" },
+    "justified_by": { "type": "array", "items": { "type": "string" }, "description": "IDs node Principle" }
+  }
+}

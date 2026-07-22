@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L06-visual-strategy.schema.json",
+  "title": "L6 Visual Strategy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "information_architecture_ref", "approach_name", "rationale", "justified_by_layers"],
+  "properties": {
+    "id": { "type": "string" },
+    "information_architecture_ref": { "type": "string" },
+    "approach_name": { "type": "string", "description": "mis. minimal, editorial, bold, brutalist, dst. — bebas, bukan enum tertutup" },
+    "rationale": { "type": "string" },
+    "justified_by_layers": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" },
+      "description": "Referensi lapis L0-L14 yang menjustifikasi pilihan strategi ini"
+    },
+    "rejected_alternatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["alternative", "why_rejected"],
+        "properties": {
+          "alternative": { "type": "string" },
+          "why_rejected": { "type": "string" }
+        }
+      }
+    }
+  }
+}

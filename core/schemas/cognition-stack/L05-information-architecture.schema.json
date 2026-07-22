@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L05-information-architecture.schema.json",
+  "title": "L5 Information Architecture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "message_hierarchy_ref", "groups", "sequence"],
+  "properties": {
+    "id": { "type": "string" },
+    "message_hierarchy_ref": { "type": "string" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["group_name", "items", "rationale"],
+        "properties": {
+          "group_name": { "type": "string" },
+          "items": { "type": "array", "items": { "type": "string" } },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "sequence": { "type": "array", "items": { "type": "string" }, "description": "Urutan group_name sesuai alur baca" }
+  }
+}

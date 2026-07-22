@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L10-imagery.schema.json",
+  "title": "L10 Imagery/Photography",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "color_contrast_ref", "role", "rationale"],
+  "properties": {
+    "id": { "type": "string" },
+    "color_contrast_ref": { "type": "string" },
+    "role": { "type": "string", "enum": ["evidence", "mood", "navigation"] },
+    "image_specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["spec", "purpose"],
+        "properties": {
+          "spec": { "type": "string" },
+          "purpose": { "type": "string" }
+        }
+      }
+    },
+    "rationale": { "type": "string" }
+  }
+}

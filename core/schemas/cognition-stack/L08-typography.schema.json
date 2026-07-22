@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L08-typography.schema.json",
+  "title": "L8 Typography",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "composition_grid_ref", "typeface_system", "justified_by"],
+  "properties": {
+    "id": { "type": "string" },
+    "composition_grid_ref": { "type": "string" },
+    "typeface_system": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "typeface", "rationale"],
+        "properties": {
+          "role": { "type": "string", "description": "mis. display, body, caption" },
+          "typeface": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "justified_by": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" },
+      "description": "Biasanya menunjuk L3 (voice) dan L4 (hierarchy)"
+    }
+  }
+}

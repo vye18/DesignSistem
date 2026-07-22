@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L03-brand-voice.schema.json",
+  "title": "L3 Brand & Voice",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "audience_model_ref", "tone_attributes", "voice_description"],
+  "properties": {
+    "id": { "type": "string" },
+    "audience_model_ref": { "type": "string" },
+    "brand_id": { "type": "string", "description": "Ref opsional ke entitas brand, jika ada" },
+    "tone_attributes": { "type": "array", "items": { "type": "string" } },
+    "forbidden_elements": { "type": "array", "items": { "type": "string" } },
+    "required_elements": { "type": "array", "items": { "type": "string" } },
+    "voice_description": { "type": "string" }
+  }
+}

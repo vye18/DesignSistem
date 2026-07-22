@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/engine.schema.json",
+  "title": "Engine Node",
+  "description": "Referensi ke modul eksekusi (§7/§10), untuk pelacakan implements-relation di graph.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "version", "implements"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^engine:[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "implements": { "type": "array", "items": { "type": "string" }, "description": "IDs Principle dan/atau Pattern" }
+  }
+}

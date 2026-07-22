@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L11-draft-synthesis.schema.json",
+  "title": "L11 Draft Synthesis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "composed_from", "draft_ref", "decision_trace"],
+  "properties": {
+    "id": { "type": "string" },
+    "composed_from": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Refs ke artefak L6-L10 yang disatukan"
+    },
+    "draft_ref": { "type": "string", "description": "Pointer ke draf konkret (file/asset/URI)" },
+    "decision_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision", "justified_by_layer", "rationale"],
+        "properties": {
+          "decision": { "type": "string" },
+          "justified_by_layer": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" },
+          "rationale": { "type": "string" }
+        }
+      },
+      "description": "Rantai 'keputusan X ada karena kebutuhan Y di lapis Z' (§6.2)"
+    }
+  }
+}

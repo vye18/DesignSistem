@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/cognition-stack/L14-final-lock.schema.json",
+  "title": "L14 Final Lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "locked", "passed_gates", "locked_by", "timestamp"],
+  "properties": {
+    "id": { "type": "string" },
+    "locked": { "type": "boolean" },
+    "passed_gates": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" }
+    },
+    "skipped_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["layer", "justification"],
+        "properties": {
+          "layer": { "type": "string", "pattern": "^L(0[0-9]|1[0-4])$" },
+          "justification": { "type": "string", "description": "Wajib diisi — skip tidak boleh diam-diam (§5)" }
+        }
+      }
+    },
+    "locked_by": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" }
+  }
+}

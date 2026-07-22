@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://odi.dev/schemas/knowledge-graph/principle.schema.json",
+  "title": "Principle Node",
+  "description": "Unit kognitif paling atomik; berasal dari salah satu pilar §4.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "pillar", "statement", "tags"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^principle:[a-z0-9-]+$" },
+    "pillar": {
+      "type": "string",
+      "enum": [
+        "cognitive-psychology",
+        "visual-perception",
+        "communication-design",
+        "information-architecture",
+        "systems-thinking"
+      ]
+    },
+    "statement": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}
