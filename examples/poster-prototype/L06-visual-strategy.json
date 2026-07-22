@@ -1,0 +1,13 @@
+{
+  "id": "L06:poster-prototype-01",
+  "information_architecture_ref": "L05:poster-prototype-01",
+  "approach_name": "Grid modular editorial dengan aksen geometris tunggal",
+  "rationale": "Mengombinasikan objektivitas grid modular (pattern:modular-grid-for-density, Swiss Design) — agar hierarki tetap terbaca di jarak jauh maupun ukuran thumbnail Instagram — dengan satu bentuk geometris besar (pattern:geometric-primitives-as-universal-vocabulary, Bauhaus) sebagai representasi visual literal dari tema \"Bentuk & Fungsi\" itu sendiri. Kedua pattern diambil dari Knowledge Graph via Reference Engine sebagai pola berpikir, bukan aset visual.",
+  "justified_by_layers": ["L02", "L03", "L04"],
+  "rejected_alternatives": [
+    {
+      "alternative": "Kolase foto karya peserta memenuhi seluruh bidang poster",
+      "why_rejected": "Bersaing dengan hierarki L4 dan sulit terbaca di ukuran thumbnail Instagram — melanggar physical_constraints di L02."
+    }
+  ]
+}

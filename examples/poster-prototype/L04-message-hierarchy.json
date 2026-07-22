@@ -1,0 +1,10 @@
+{
+  "id": "L04:poster-prototype-01",
+  "brand_voice_ref": "L03:poster-prototype-01",
+  "levels": [
+    { "rank": 1, "message": "Nama acara: \"Bentuk & Fungsi\"", "rationale": "Judul tema adalah hook emosional pertama yang membedakan pameran ini dari pameran generik lain." },
+    { "rank": 2, "message": "Tanggal & lokasi", "rationale": "Informasi aksi paling kritis — tanpa ini niat datang tidak bisa dieksekusi." },
+    { "rank": 3, "message": "QR code pendaftaran", "rationale": "Call-to-action konkret; harus mudah ditemukan setelah pembaca tertarik oleh rank 1-2." },
+    { "rank": 4, "message": "Logo sponsor & program studi", "rationale": "Kewajiban kontraktual/institusional, tapi bukan alasan orang memutuskan datang." }
+  ]
+}

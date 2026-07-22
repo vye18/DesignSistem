@@ -1,0 +1,20 @@
+{
+  "id": "L01:poster-prototype-01",
+  "brief_intake_ref": "L00:poster-prototype-01",
+  "communication_problem": "Bagaimana satu lembar poster membuat mahasiswa desain dan publik pemerhati desain lokal memutuskan untuk datang ke pameran akhir tahun dalam waktu pandang di bawah 5 detik — baik di mading fisik maupun feed media sosial — sambil tetap memenuhi kewajiban visibilitas sponsor.",
+  "rejected_framings": [
+    {
+      "framing": "Buat poster yang 'terlihat modern'",
+      "why_rejected": "Tidak menjawab pertanyaan komunikasi apa pun — 'modern' adalah gaya permukaan, bukan solusi untuk masalah kedatangan pengunjung."
+    },
+    {
+      "framing": "Poster sebagai galeri mini karya peserta",
+      "why_rejected": "Mengalihkan fungsi poster dari undangan menjadi katalog karya, memecah fokus dari satu ajakan utama: datang dan daftar."
+    }
+  ],
+  "success_criteria": [
+    "Nama acara dan tanggal terbaca dalam <3 detik dari jarak mading kampus (~1.5m)",
+    "QR pendaftaran mudah ditemukan tanpa perlu mencari",
+    "Logo sponsor terlihat jelas namun tidak mengalahkan judul acara"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "L05:poster-prototype-01",
+  "message_hierarchy_ref": "L04:poster-prototype-01",
+  "groups": [
+    { "group_name": "hook", "items": ["judul-acara", "tagline-tema"], "rationale": "Elemen yang menangkap perhatian pertama, dikelompokkan agar terbaca sebagai satu kesatuan." },
+    { "group_name": "aksi", "items": ["tanggal", "lokasi", "qr-code"], "rationale": "Informasi yang dibutuhkan untuk benar-benar hadir, dikelompokkan berdekatan (Gestalt proximity) agar tidak perlu dicari terpisah." },
+    { "group_name": "kredit", "items": ["logo-prodi", "logo-sponsor"], "rationale": "Kewajiban institusional, ditempatkan sebagai penutup visual agar tidak bersaing dengan hook." }
+  ],
+  "sequence": ["hook", "aksi", "kredit"]
+}

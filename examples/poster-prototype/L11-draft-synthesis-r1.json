@@ -1,0 +1,22 @@
+{
+  "id": "L11:poster-prototype-01-r1",
+  "composed_from": ["L06:poster-prototype-01", "L07:poster-prototype-01", "L08:poster-prototype-01", "L09:poster-prototype-01-r1"],
+  "draft_ref": "examples/poster-prototype/draft-v2.md",
+  "decision_trace": [
+    {
+      "decision": "Pakai satu bentuk geometris sebagai elemen aksen tema di upper-third, kini sebagai outline bukan solid",
+      "justified_by_layer": "L06",
+      "rationale": "Tetap merepresentasikan 'Bentuk & Fungsi' (pattern:geometric-primitives-as-universal-vocabulary), tapi diturunkan dominasinya setelah revisi L09."
+    },
+    {
+      "decision": "Grid 6-kolom dengan margin story-safe-zone lebar",
+      "justified_by_layer": "L02",
+      "rationale": "Tidak berubah dari draft v1 — tidak ada finding yang menyentuh L07 secara blocking."
+    },
+    {
+      "decision": "Pindahkan warna paling jenuh dari bentuk aksen ke judul-acara",
+      "justified_by_layer": "L12",
+      "rationale": "Revisi langsung dari finding blocking L12 putaran pertama — kontras kini melayani rank 1 di L4."
+    }
+  ]
+}

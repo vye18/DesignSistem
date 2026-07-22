@@ -1,0 +1,12 @@
+{
+  "id": "L07:poster-prototype-01",
+  "visual_strategy_ref": "L06:poster-prototype-01",
+  "grid_system": "6-kolom modular grid, margin luas di atas & bawah untuk story-safe-zone",
+  "spatial_zones": [
+    { "zone": "upper-third", "purpose": "judul acara + bentuk geometris aksen (hook)", "maps_to_message_rank": 1 },
+    { "zone": "info-band", "purpose": "tanggal & lokasi (aksi)", "maps_to_message_rank": 2 },
+    { "zone": "cta-band", "purpose": "QR code pendaftaran dengan area kontras tersendiri (aksi)", "maps_to_message_rank": 3 },
+    { "zone": "footer-strip", "purpose": "logo sponsor & program studi (kredit)", "maps_to_message_rank": 4 }
+  ],
+  "rationale": "Margin atas-bawah lebar memastikan zona hook dan aksi tidak terpotong safe-zone UI Instagram Story; grid 6-kolom cukup fleksibel untuk cetak mading A2 maupun crop rasio 9:16."
+}

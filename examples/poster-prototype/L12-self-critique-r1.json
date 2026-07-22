@@ -1,0 +1,11 @@
+{
+  "id": "L12:poster-prototype-01-r1",
+  "draft_ref": "examples/poster-prototype/draft-v2.md",
+  "attention_path_check": {
+    "attention_path": ["judul-acara", "bentuk-geometris-aksen", "cta-band(qr)", "info-band(tanggal-lokasi)", "footer-strip"],
+    "matches_message_hierarchy": true,
+    "mismatches": []
+  },
+  "findings": [],
+  "pass": true
+}

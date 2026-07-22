@@ -1,0 +1,13 @@
+{
+  "id": "L09:poster-prototype-01-r1",
+  "typography_ref": "L08:poster-prototype-01",
+  "palette": [
+    { "role": "background", "color": "#F5F2EA", "contrast_purpose": "Tetap netral hangat." },
+    { "role": "judul-acara", "color": "#E8452C", "contrast_purpose": "Dipindah ke warna paling jenuh — kini judul yang menarik mata pertama, memenuhi rank 1 di L4." },
+    { "role": "bentuk-geometris-aksen", "color": "#111111 (outline monokrom, tidak solid)", "contrast_purpose": "Diturunkan jadi bentuk outline monokrom — tetap merepresentasikan tema tapi tidak lagi bersaing kontras dengan judul." },
+    { "role": "qr-code-panel", "color": "#111111 di atas kotak putih", "contrast_purpose": "Tetap kontras tinggi, scannable." },
+    { "role": "logo-sponsor", "color": "warna asli logo (tidak diubah)", "contrast_purpose": "Tetap netral di footer-strip." }
+  ],
+  "focal_points": ["judul-acara", "qr-code-panel"],
+  "justified_by": ["L04", "L12"]
+}

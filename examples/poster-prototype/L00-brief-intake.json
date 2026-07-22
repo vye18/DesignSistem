@@ -1,0 +1,15 @@
+{
+  "id": "L00:poster-prototype-01",
+  "raw_brief": "Bikin poster untuk pameran desain grafis mahasiswa akhir tahun, temanya \"Bentuk & Fungsi\". Informasinya: nama acara, tanggal, lokasi, cara daftar (QR code), dan nama sponsor utama kampus.",
+  "stated_request": "Buat poster untuk pameran desain grafis mahasiswa akhir tahun bertema \"Bentuk & Fungsi\".",
+  "inferred_intent": "Menarik mahasiswa, dosen, dan publik pemerhati desain lokal agar datang ke pameran dan mendaftar via QR code, sekaligus menegaskan kredibilitas program studi lewat eksekusi tema.",
+  "ambiguities": [
+    "Prioritas visual antara nama acara vs logo sponsor utama tidak dijelaskan di brief",
+    "Tidak disebutkan apakah audiens primer mahasiswa/dosen internal atau publik umum di luar kampus"
+  ],
+  "clarifications_needed": [
+    "Siapa audiens utama: internal kampus, publik umum, atau keduanya?",
+    "Apakah logo sponsor punya ketentuan ukuran minimum sesuai kontrak sponsorship?"
+  ],
+  "clarifications_resolved": true
+}

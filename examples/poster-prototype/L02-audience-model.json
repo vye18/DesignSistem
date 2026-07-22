@@ -1,0 +1,16 @@
+{
+  "id": "L02:poster-prototype-01",
+  "problem_framing_ref": "L01:poster-prototype-01",
+  "primary_audience": "Mahasiswa desain & seni tingkat akhir dan junior di kampus yang sama, melihat poster di mading fisik koridor dan story Instagram kampus.",
+  "secondary_audiences": [
+    "Dosen dan pemerhati desain grafis lokal di luar kampus, dijangkau lewat repost akun komunitas desain."
+  ],
+  "context_of_viewing": "Mading fisik koridor kampus (jarak baca ~1-2 meter, dilihat sambil lewat) dan feed/story Instagram (dilihat kurang dari 2 detik sebelum swipe).",
+  "mental_state": "Terburu-buru di koridor kampus di antara jam kuliah; scrolling cepat dan mudah teralih di Instagram.",
+  "physical_constraints": [
+    "Jarak baca mading fisik 1-2 meter",
+    "Format story Instagram vertikal 9:16 — elemen penting harus di luar area yang tertutup UI (top/bottom ~15%)"
+  ],
+  "literacy_assumptions": "Familiar dengan istilah desain grafis dasar; tidak perlu penjelasan istilah 'pameran' atau 'akhir tahun'.",
+  "prior_knowledge": "Mayoritas audiens internal sudah tahu lokasi galeri kampus dari acara sebelumnya, tapi mahasiswa baru dan publik luar belum."
+}

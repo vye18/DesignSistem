@@ -1,0 +1,13 @@
+{
+  "id": "L14:poster-prototype-01",
+  "locked": true,
+  "passed_gates": ["L00", "L01", "L02", "L03", "L04", "L05", "L06", "L07", "L08", "L09", "L11", "L12"],
+  "skipped_gates": [
+    {
+      "layer": "L10",
+      "justification": "Poster murni tipografi + geometris, tidak memakai imagery/fotografi. Peran visual yang biasa diisi imagery sudah dipenuhi oleh bentuk geometris aksen di L06/L07/L09. Skip dicatat sadar sesuai aturan §5, bukan default diam-diam."
+    }
+  ],
+  "locked_by": "reasoning-engine-prototype (manual walkthrough, Volume 3 proof-of-concept)",
+  "timestamp": "2026-07-22T00:00:00Z"
+}

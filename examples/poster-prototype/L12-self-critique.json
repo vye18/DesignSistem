@@ -1,0 +1,26 @@
+{
+  "id": "L12:poster-prototype-01",
+  "draft_ref": "examples/poster-prototype/draft-v1.md",
+  "attention_path_check": {
+    "attention_path": ["bentuk-geometris-aksen", "judul-acara", "cta-band(qr)", "info-band(tanggal-lokasi)", "footer-strip"],
+    "matches_message_hierarchy": false,
+    "mismatches": [
+      "Elemen 'bentuk-geometris-aksen' (bukan bagian dari Message Hierarchy L4) menarik mata lebih dulu daripada 'judul-acara' (rank 1), karena saturasi warna tertinggi (#E8452C) dan ukuran area terbesar ada di bentuk aksen, bukan di teks judul."
+    ]
+  },
+  "findings": [
+    {
+      "layer_ref": "L09",
+      "issue": "Warna paling jenuh diletakkan pada bentuk aksen, bukan pada judul acara, sehingga attention path menyimpang dari Message Hierarchy rank 1.",
+      "severity": "blocking",
+      "evidence": "attention_path_check.mismatches[0]"
+    },
+    {
+      "layer_ref": "L07",
+      "issue": "Ukuran bentuk aksen di upper-third lebih besar daripada blok judul; proporsi ukuran antara dua elemen di zona yang sama tidak diatur eksplisit.",
+      "severity": "minor",
+      "evidence": "spatial_zones.upper-third menampung dua elemen tanpa rasio ukuran eksplisit"
+    }
+  ],
+  "pass": false
+}

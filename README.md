@@ -99,14 +99,30 @@ menjalankan query terhadap graph ini secara runtime (baru kontrak I/O-nya
 yang ada, di `engines/reference-engine/README.md`) — itu bagian dari
 Volume 3+ setelah Reasoning/Planning Engine punya prototipe kerja.
 
+## Volume 3–4 — Prototipe Cognition Stack untuk Domain Poster (§14)
+
+**Proof-of-concept manual selesai** di
+[`examples/poster-prototype/`](examples/poster-prototype/README.md):
+walkthrough artifact-per-artifact L0→L14 untuk domain `domain:poster`
+(rekomendasi §16 butir 3), termasuk satu putaran Self-Critique yang gagal
+(`L12` menemukan finding `blocking`) dan Revision Loop (`L13`) yang kembali
+presisi ke lapis yang gagal (L09), bukan mengulang dari L11 — sesuai
+kewajiban §5. Semua 17 artifact JSON tervalidasi terhadap
+`core/schemas/cognition-stack/`.
+
+Ini **bukan** implementasi engine otomatis (belum ada infrastruktur untuk
+menjalankan model secara live di repo ini) — ini adalah bukti bahwa
+kontrak skema dan aturan struktural Cognition Stack benar-benar bisa
+dipatuhi end-to-end pada kasus nyata, sebelum engine sungguhan ditulis.
+
 ## Roadmap (§14)
 
 | Volume | Fokus | Status |
 |---|---|---|
 | 1 (repo ini) | Blueprint & kontrak dasar — struktur, skema, kontrak antar-engine | Struktur di-scaffold |
 | 2 | Reference Engine + Knowledge Graph Seed — reverse-engineering 5-10 sistem desain | Graph di-seed (6 sistem); implementasi runtime Reference Engine belum |
-| 3 | Reasoning + Planning Engine — prototipe untuk 1 domain sempit | Belum dimulai |
-| 4 | Critic Engine + Visual Cognition Engine — self-critique loop end-to-end | Belum dimulai |
+| 3 | Reasoning + Planning Engine — prototipe untuk 1 domain sempit | Walkthrough manual selesai (`examples/poster-prototype/`); implementasi engine otomatis belum |
+| 4 | Critic Engine + Visual Cognition Engine — self-critique loop end-to-end | Walkthrough manual selesai (1 siklus gagal→revisi→lolos); implementasi engine otomatis belum |
 | 5 | Prompt Compiler multi-model — Claude dulu, lalu GPT/Gemini/dst. | Belum dimulai |
 | 6+ | Scale-out — ekspansi domain, kontributor, QA pipeline otomatis | Belum dimulai |
 

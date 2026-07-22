@@ -1,0 +1,13 @@
+{
+  "id": "L09:poster-prototype-01",
+  "typography_ref": "L08:poster-prototype-01",
+  "palette": [
+    { "role": "background", "color": "#F5F2EA", "contrast_purpose": "Netral hangat, tidak bersaing dengan elemen aksen." },
+    { "role": "judul-acara", "color": "#111111", "contrast_purpose": "Kontras tinggi di atas krem — dimaksudkan memenuhi rank 1." },
+    { "role": "bentuk-geometris-aksen", "color": "#E8452C", "contrast_purpose": "Warna paling jenuh di poster, menegaskan tema secara visual." },
+    { "role": "qr-code-panel", "color": "#111111 di atas kotak putih", "contrast_purpose": "Kontras tinggi agar QR tetap scannable." },
+    { "role": "logo-sponsor", "color": "warna asli logo (tidak diubah)", "contrast_purpose": "Kewajiban kontraktual, ditempatkan di footer-strip netral." }
+  ],
+  "focal_points": ["bentuk-geometris-aksen", "judul-acara"],
+  "justified_by": ["L04", "L08"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "L03:poster-prototype-01",
+  "audience_model_ref": "L02:poster-prototype-01",
+  "brand_id": "prodi-dkv-fiktif",
+  "tone_attributes": ["percaya diri", "rapi", "tidak norak", "muda tapi bukan main-main"],
+  "forbidden_elements": [
+    "Clip art generik",
+    "Efek drop-shadow/gradient berlebihan",
+    "Lebih dari 2 keluarga tipografi"
+  ],
+  "required_elements": [
+    "Logo program studi",
+    "Logo sponsor utama (ukuran wajar sesuai kontrak)",
+    "QR code pendaftaran"
+  ],
+  "voice_description": "Percaya diri tapi tidak berteriak — mengomunikasikan bahwa peserta pameran serius soal kerajinan (craft), bukan sekadar tugas akhir semester."
+}

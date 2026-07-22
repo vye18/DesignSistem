@@ -1,0 +1,10 @@
+{
+  "id": "L08:poster-prototype-01",
+  "composition_grid_ref": "L07:poster-prototype-01",
+  "typeface_system": [
+    { "role": "display", "typeface": "Sans-serif geometris berat (gaya Futura/Recoleta Bold)", "rationale": "Menegaskan tema 'Bentuk' lewat karakter huruf yang secara struktural geometris, memenuhi voice 'percaya diri, tidak norak' (L3)." },
+    { "role": "body", "typeface": "Sans-serif grotesk netral (gaya Helvetica/Inter)", "rationale": "Menjaga keterbacaan tanggal/lokasi pada jarak baca pendek (L2); kontras nada dengan display type memperkuat hierarki." },
+    { "role": "caption", "typeface": "Sama dengan body, ukuran lebih kecil", "rationale": "Konsistensi, sekaligus memenuhi batas maksimum 2 keluarga huruf di L3 forbidden_elements." }
+  ],
+  "justified_by": ["L03", "L04"]
+}

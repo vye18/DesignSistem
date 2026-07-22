@@ -1,0 +1,22 @@
+{
+  "id": "L11:poster-prototype-01",
+  "composed_from": ["L06:poster-prototype-01", "L07:poster-prototype-01", "L08:poster-prototype-01", "L09:poster-prototype-01"],
+  "draft_ref": "examples/poster-prototype/draft-v1.md",
+  "decision_trace": [
+    {
+      "decision": "Pakai satu bentuk geometris besar sebagai elemen aksen tema di upper-third",
+      "justified_by_layer": "L06",
+      "rationale": "Merepresentasikan 'Bentuk & Fungsi' secara literal — pattern:geometric-primitives-as-universal-vocabulary (Bauhaus, via Reference Engine)."
+    },
+    {
+      "decision": "Grid 6-kolom dengan margin story-safe-zone lebar",
+      "justified_by_layer": "L02",
+      "rationale": "physical_constraints menyebut area aman story Instagram 15% atas-bawah."
+    },
+    {
+      "decision": "Warna paling jenuh (#E8452C) dipakai untuk bentuk geometris aksen, bukan judul",
+      "justified_by_layer": "L09",
+      "rationale": "Dimaksudkan menegaskan tema secara visual — dicatat sebagai keputusan berisiko yang perlu diverifikasi Critic Engine terhadap L4 rank 1."
+    }
+  ]
+}
