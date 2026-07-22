@@ -45,7 +45,16 @@ dari transformasi adapter (tipis, spesifik model).
 
 ## Status
 
-Struktur direktori siap. `core-templates/` dan `adapters/*` masih kosong —
-menunggu Volume 5 (§14 Roadmap), setelah Reasoning/Planning/Critic Engine
-punya prototipe kerja (Volume 3–4). Adapter Claude diprioritaskan lebih
-dulu karena menjadi *native execution environment* untuk pengembangan ODI.
+**`core-templates/` lengkap** untuk keempat engine (Reasoning, Planning,
+Critic, Visual Cognition) — instruksi model-agnostic yang mengoperasionalkan
+kontrak di `engines/*/README.md` menjadi langkah konkret, masing-masing
+merujuk contoh nyata di `examples/poster-prototype/`.
+
+**`adapters/claude/` lengkap** — rendering Claude (XML-tag + tool-use
+dengan `input_schema` dibind langsung dari `core/schemas/cognition-stack/`)
+untuk keempat engine yang sama, sesuai prioritas §11.1 (Claude sebagai
+*native execution environment*).
+
+`adapters/gpt|gemini|grok|qwen|deepseek/` masih kosong — menyusul di
+Volume 5 lanjutan, mengikuti pola yang sama (menerjemahkan
+`core-templates/*.md`, bukan menulis ulang logika kognisinya).
