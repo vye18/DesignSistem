@@ -133,7 +133,7 @@ menyentuh `knowledge-graph/`, `core/schemas/`, atau `examples/`. Lihat
 | 2 | Reference Engine + Knowledge Graph Seed — reverse-engineering 5-10 sistem desain | Graph di-seed (6 sistem); implementasi runtime Reference Engine belum |
 | 3 | Reasoning + Planning Engine — prototipe untuk 1 domain sempit | Walkthrough manual selesai (`examples/poster-prototype/`); implementasi engine otomatis belum |
 | 4 | Critic Engine + Visual Cognition Engine — self-critique loop end-to-end | Walkthrough manual selesai (1 siklus gagal→revisi→lolos); implementasi engine otomatis belum |
-| 5 | Prompt Compiler multi-model — Claude dulu, lalu GPT/Gemini/dst. | Core-templates + adapter Claude selesai untuk 4 engine; GPT/Gemini/dst. belum |
+| 5 | Prompt Compiler multi-model — Claude dulu, lalu GPT/Gemini/dst. | Core-templates + adapter Claude selesai (4 engine); GPT/Gemini/Grok/Qwen/DeepSeek punya kerangka + 1 contoh (Reasoning Engine) |
 | 6+ | Scale-out — ekspansi domain, kontributor, QA pipeline otomatis | QA pipeline otomatis (`qa_check.py` + CI) selesai; ekspansi domain/kontributor menyusul |
 
 ## Future Expansion (§15, diakui terbuka)

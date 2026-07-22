@@ -55,6 +55,12 @@ dengan `input_schema` dibind langsung dari `core/schemas/cognition-stack/`)
 untuk keempat engine yang sama, sesuai prioritas §11.1 (Claude sebagai
 *native execution environment*).
 
-`adapters/gpt|gemini|grok|qwen|deepseek/` masih kosong — menyusul di
-Volume 5 lanjutan, mengikuti pola yang sama (menerjemahkan
-`core-templates/*.md`, bukan menulis ulang logika kognisinya).
+**`adapters/gpt|gemini|grok|qwen|deepseek/` — kerangka + 1 contoh penuh
+per model** (engine Reasoning). Masing-masing punya `README.md` yang
+menjelaskan konvensi binding skema spesifik model itu (tool-calling
+OpenAI-compatible untuk GPT/Grok/DeepSeek, `responseSchema` untuk Gemini,
+fallback JSON-in-prompt untuk Qwen), dan `reasoning-engine.md` sebagai
+rendering nyata. Tiga engine lain (Planning, Critic, Visual Cognition)
+per model mengikuti pola pembungkus identik — dicatat sebagai pekerjaan
+mekanis lanjutan, bukan keputusan desain baru, sehingga tidak diulang
+manual satu-satu di v0.1 ini.
