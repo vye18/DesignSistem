@@ -657,10 +657,11 @@ Volume 2 dimulai hanya setelah §16 disepakati.
 ---
 
 > **Status kontrak §16 di repositori ini:** butir 1 (skema JSON per lapis
-> kognisi) dan sebagian butir 2 (format penyimpanan graph) sudah
-> di-*draft*-kan sebagai kandidat lock di `core/schemas/` dan
-> `knowledge-graph/README.md` — lihat catatan "Status: draft, menunggu
-> sign-off" di masing-masing file. Butir 3 (domain pertama) direkomendasikan
-> **poster/single-page** sesuai saran spec, tercatat di README repo root,
-> tapi tetap terbuka untuk diputuskan ulang oleh maintainer sebelum Volume 2
+> kognisi) sudah didraft di `core/schemas/`. Butir 2 (format penyimpanan
+> graph) sudah **divalidasi dengan data seed nyata** — lihat
+> `knowledge-graph/README.md` dan `knowledge-graph/build_graph.py` — hasil
+> Volume 2 (reverse-engineering 6 sistem desain menjadi 55 node/90 edge).
+> Butir 3 (domain pertama) direkomendasikan **poster/single-page** sesuai
+> saran spec, tercatat di README repo root, tapi tetap terbuka untuk
+> dikunci final oleh maintainer sebelum Volume 3 (implementasi engine)
 > resmi dimulai.

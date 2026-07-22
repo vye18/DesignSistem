@@ -16,11 +16,14 @@ dikunci sebelum Volume 2 (Reference Engine + Knowledge Graph Seed) dimulai:
 
 1. ✅ *(draft)* Skema objek data per lapis kognisi L0–L14 — ada di
    `cognition-stack/`.
-2. 🟡 *(sebagian draft)* Format penyimpanan Knowledge Graph — skema node/edge
-   ada di `knowledge-graph/`, tapi format final (Markdown+JSONL vs
-   alternatif) baru divalidasi setelah ada data seed nyata (Volume 2).
-3. ⬜ Domain pertama untuk prototipe — direkomendasikan **poster/single-page**
-   (lihat README root), belum diputuskan final oleh maintainer.
+2. 🟡 *(divalidasi dengan data nyata, menunggu sign-off final)* Format
+   penyimpanan Knowledge Graph — skema node/edge di `knowledge-graph/`
+   sudah diuji terhadap 55 node/90 edge seed Volume 2 lewat
+   `knowledge-graph/build_graph.py` tanpa error referensial.
+3. 🟡 Domain pertama untuk prototipe — direkomendasikan **poster/single-page**
+   (lihat README root); domain lain sudah ikut di-seed untuk cakupan
+   Reference Engine, tapi domain prototipe *pertama* belum diputuskan
+   final oleh maintainer.
 
 ## Aturan Versi Skema
 

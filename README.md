@@ -70,23 +70,41 @@ dicatat eksplisit di `L14`, tidak diam-diam.
 
 ## Status Kontrak §16 (Kontrak Terbuka untuk Volume Berikutnya)
 
-Sebelum Volume 2 resmi dimulai, tiga hal harus dikunci maintainer:
+Tiga hal yang harus dikunci maintainer sebelum Volume 3 (implementasi
+engine) dimulai:
 
 1. ✅ **Draft tersedia** — Skema JSON per lapis kognisi L0–L14:
    `core/schemas/cognition-stack/`.
-2. 🟡 **Sebagian draft** — Format penyimpanan Knowledge Graph
-   (Markdown+JSONL): `knowledge-graph/README.md`. Perlu divalidasi dengan
-   data seed nyata di Volume 2 sebelum dikunci final.
-3. ⬜ **Direkomendasikan, belum final** — Domain prototipe pertama:
-   **poster/single-page**, sesuai saran spec (paling sempit & terukur
-   untuk memvalidasi loop Reasoning–Planning–Critic).
+2. 🟡 **Divalidasi dengan data seed nyata, menunggu sign-off final** —
+   Format Markdown+JSONL sudah diuji dengan 55 node/90 edge hasil seeding
+   Volume 2 (`knowledge-graph/build_graph.py` menegakkan integritas
+   referensial). Lihat `knowledge-graph/README.md`.
+3. 🟡 **Direkomendasikan, dipakai sebagai domain seed terluas** —
+   **poster/single-page**, sesuai saran spec. Domain lain (dashboard-ui,
+   mobile-app, editorial-layout, dst.) sudah ikut di-seed di Volume 2 agar
+   Reference Engine punya cakupan lintas-domain, tapi domain prototipe
+   *pertama* untuk Volume 3 tetap direkomendasikan poster/single-page.
+
+## Volume 2 — Reference Engine + Knowledge Graph Seed (§14)
+
+**Sudah di-seed.** 6 sistem desain di-reverse-engineer menjadi node
+Pattern/CaseStudy nyata: Swiss Design, Apple HIG, IBM Carbon, Editorial
+Design, Bauhaus, Material Design. Rincian isi graph dan cara build:
+`knowledge-graph/README.md`. Termasuk contoh nyata relasi `contradicts`
+(trade-off densitas vs whitespace) dan `supersedes` (evolusi pola
+skeuomorfisme → elevation/flat), sesuai kewajiban §8.3.
+
+Belum dikerjakan di Volume 2: implementasi Reference Engine yang benar-benar
+menjalankan query terhadap graph ini secara runtime (baru kontrak I/O-nya
+yang ada, di `engines/reference-engine/README.md`) — itu bagian dari
+Volume 3+ setelah Reasoning/Planning Engine punya prototipe kerja.
 
 ## Roadmap (§14)
 
 | Volume | Fokus | Status |
 |---|---|---|
 | 1 (repo ini) | Blueprint & kontrak dasar — struktur, skema, kontrak antar-engine | Struktur di-scaffold |
-| 2 | Reference Engine + Knowledge Graph Seed — reverse-engineering 5-10 sistem desain | Belum dimulai |
+| 2 | Reference Engine + Knowledge Graph Seed — reverse-engineering 5-10 sistem desain | Graph di-seed (6 sistem); implementasi runtime Reference Engine belum |
 | 3 | Reasoning + Planning Engine — prototipe untuk 1 domain sempit | Belum dimulai |
 | 4 | Critic Engine + Visual Cognition Engine — self-critique loop end-to-end | Belum dimulai |
 | 5 | Prompt Compiler multi-model — Claude dulu, lalu GPT/Gemini/dst. | Belum dimulai |

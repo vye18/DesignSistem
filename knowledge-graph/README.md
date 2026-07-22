@@ -11,12 +11,18 @@ knowledge-graph/
 │   ├── patterns/*.md         (→ pattern.schema.json)
 │   ├── case-studies/*.md     (→ case-study.schema.json)
 │   ├── systems/*.md          (→ system.schema.json)
+│   ├── domains/*.md          (→ domain.schema.json)
 │   └── benchmarks/*.md       (→ benchmark.schema.json)
 ├── edges/
 │   └── edges.jsonl           (satu baris per edge, → edge.schema.json)
+├── build_graph.py             (compile nodes+edges → index/graph.db; validasi referensial)
 └── index/
     └── (graph.db — generated, tidak di-commit; lihat .gitignore)
 ```
+
+Jalankan `python3 knowledge-graph/build_graph.py` dari root repo untuk
+memvalidasi dan mengompilasi graph. Skrip gagal (`exit 1`) jika ada node
+yatim referensial (edge menunjuk id yang tidak ada) atau id duplikat.
 
 ## Mengapa Graph, Bukan Folder Datar (§8.1)
 
@@ -67,9 +73,32 @@ Setiap node baru dari kontribusi terbuka wajib lolos:
 
 Lihat `contrib/CONTRIBUTING.md` untuk proses lengkap.
 
+## Seed Data (Volume 2)
+
+Graph sudah diisi seed awal hasil reverse-engineering 6 sistem desain
+(§14 Volume 2): Swiss Design, Apple HIG, IBM Carbon, Editorial Design,
+Bauhaus, Material Design. Per build terakhir:
+
+| Tipe | Jumlah |
+|---|---|
+| Principle | 15 |
+| System | 6 |
+| Pattern | 17 |
+| CaseStudy | 6 |
+| Domain | 7 |
+| Benchmark | 4 (seed awal, kategori L02/L04/L07/L12) |
+| Edge | 90 |
+
+Termasuk satu relasi `contradicts` nyata (densitas informasi enterprise
+dashboard vs napas visual editorial layout) dan satu relasi `supersedes`
+nyata (elevation/flat menggantikan skeuomorfisme realistis) — keduanya
+diwajibkan §8.3 sebagai bukti graph tidak menyembunyikan trade-off atau
+evolusi pola.
+
 ## Status Format Penyimpanan (§16 butir 2)
 
-**Draft.** Format Markdown+JSONL ini adalah usulan awal dan perlu divalidasi
-dengan data seed nyata (Volume 2, §14) sebelum dikunci sebagai format
-final. `index/graph.db` akan dibangun dari `nodes/` + `edges/edges.jsonl`
-saat build time (SQLite atau graph-lib — implementasi belum dipilih).
+**Divalidasi dengan data seed nyata, masih draft untuk dikunci final oleh
+maintainer.** Format Markdown+JSONL terbukti bekerja untuk 55 node/90 edge
+tanpa referensi rusak (`build_graph.py` menegakkan integritas referensial
+di setiap build). SQLite dipakai untuk `index/graph.db` — pilihan ini
+belum final, tapi sudah divalidasi sebagai baseline yang berfungsi.

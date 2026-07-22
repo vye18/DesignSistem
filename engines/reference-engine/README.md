@@ -38,5 +38,10 @@ diabaikan model.
 
 ## Status
 
-Kontrak sudah didefinisikan. Implementasi menunggu Volume 2 (§14
-Roadmap) — sekaligus seeding Knowledge Graph dengan 5–10 sistem desain awal.
+Kontrak I/O sudah didefinisikan. **Data untuk dikonsumsi sudah tersedia** —
+Knowledge Graph telah di-seed dengan 6 sistem desain (Swiss Design, Apple
+HIG, IBM Carbon, Editorial Design, Bauhaus, Material Design), 17 Pattern,
+6 CaseStudy, termasuk relasi `contradicts` dan `supersedes` nyata (lihat
+`knowledge-graph/README.md`). Implementasi runtime yang benar-benar
+menjalankan query ini lewat model menunggu Volume 3+, setelah
+Reasoning/Planning Engine punya prototipe kerja.
