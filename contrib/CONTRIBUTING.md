@@ -32,6 +32,23 @@ Alur: taruh draf di `case-studies/raw/` dulu → review → jika lolos, pindah
 ke `knowledge-graph/nodes/<tipe>/` dan tambahkan edge terkait ke
 `knowledge-graph/edges/edges.jsonl`.
 
+**Ketiga gate di atas ditegakkan otomatis** oleh
+`knowledge-graph/qa_check.py` (dijalankan CI di setiap PR yang menyentuh
+`knowledge-graph/`, `core/schemas/`, atau `examples/` — lihat
+`.github/workflows/knowledge-graph-qa.yml`). Jalankan secara lokal sebelum
+membuka PR:
+
+```
+pip install jsonschema PyYAML
+python3 knowledge-graph/qa_check.py
+python3 knowledge-graph/build_graph.py
+```
+
+`qa_check.py` menolak PR jika: node tidak valid terhadap skema, edge
+menunjuk id yang tidak ada, atau `justified_by`/`pattern_ids` kosong
+(node yatim) — termasuk mendeteksi drift antara frontmatter node dan
+`edges.jsonl` (mis. lupa menambah edge setelah mengubah frontmatter).
+
 ### 2. Menambah/Mengubah Engine
 
 Setiap engine baru harus bisa menjawab: **"pilar mana (§4) yang

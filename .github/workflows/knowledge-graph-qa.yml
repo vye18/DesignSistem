@@ -1,0 +1,54 @@
+name: Knowledge Graph QA
+
+on:
+  pull_request:
+    paths:
+      - "knowledge-graph/**"
+      - "core/schemas/**"
+      - "examples/**"
+  push:
+    branches: [main]
+    paths:
+      - "knowledge-graph/**"
+      - "core/schemas/**"
+      - "examples/**"
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install jsonschema PyYAML
+      - name: Run QA gate (§12.1) — schema, referential integrity, traceability
+        run: python3 knowledge-graph/qa_check.py
+      - name: Build graph index (validates §16 storage format)
+        run: python3 knowledge-graph/build_graph.py
+      - name: Validate poster-prototype artifacts against cognition-stack schemas
+        run: |
+          python3 - <<'PYEOF'
+          import json, glob, re, sys
+          import jsonschema
+
+          def schema_for(layer):
+              files = glob.glob(f"core/schemas/cognition-stack/{layer}-*.schema.json")
+              return json.load(open(files[0])) if files else None
+
+          errors = 0
+          for f in sorted(glob.glob("examples/poster-prototype/*.json")):
+              layer = re.match(r".*/(L\d\d)", f).group(1)
+              schema = schema_for(layer)
+              if schema is None:
+                  print(f"NO SCHEMA for {f}")
+                  errors += 1
+                  continue
+              try:
+                  jsonschema.validate(json.load(open(f)), schema)
+              except jsonschema.ValidationError as e:
+                  print(f"FAIL {f}: {e.message}")
+                  errors += 1
+          sys.exit(1 if errors else 0)
+          PYEOF

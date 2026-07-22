@@ -115,6 +115,16 @@ menjalankan model secara live di repo ini) — ini adalah bukti bahwa
 kontrak skema dan aturan struktural Cognition Stack benar-benar bisa
 dipatuhi end-to-end pada kasus nyata, sebelum engine sungguhan ditulis.
 
+## QA Pipeline Otomatis (Volume 6+, §12.1)
+
+`knowledge-graph/qa_check.py` menegakkan tiga gate §12.1 secara
+terprogram — schema validation, referential integrity, dan traceability
+(termasuk deteksi drift antara frontmatter node dan `edges.jsonl`) — dan
+gagal dengan exit code bukan-nol jika ada pelanggaran. Dijalankan otomatis
+di CI (`.github/workflows/knowledge-graph-qa.yml`) untuk setiap PR yang
+menyentuh `knowledge-graph/`, `core/schemas/`, atau `examples/`. Lihat
+`contrib/CONTRIBUTING.md` untuk cara menjalankannya secara lokal.
+
 ## Roadmap (§14)
 
 | Volume | Fokus | Status |
@@ -124,7 +134,7 @@ dipatuhi end-to-end pada kasus nyata, sebelum engine sungguhan ditulis.
 | 3 | Reasoning + Planning Engine — prototipe untuk 1 domain sempit | Walkthrough manual selesai (`examples/poster-prototype/`); implementasi engine otomatis belum |
 | 4 | Critic Engine + Visual Cognition Engine — self-critique loop end-to-end | Walkthrough manual selesai (1 siklus gagal→revisi→lolos); implementasi engine otomatis belum |
 | 5 | Prompt Compiler multi-model — Claude dulu, lalu GPT/Gemini/dst. | Core-templates + adapter Claude selesai untuk 4 engine; GPT/Gemini/dst. belum |
-| 6+ | Scale-out — ekspansi domain, kontributor, QA pipeline otomatis | Belum dimulai |
+| 6+ | Scale-out — ekspansi domain, kontributor, QA pipeline otomatis | QA pipeline otomatis (`qa_check.py` + CI) selesai; ekspansi domain/kontributor menyusul |
 
 ## Future Expansion (§15, diakui terbuka)
 
